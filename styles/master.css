@@ -1,0 +1,31 @@
+/*Import global variables*/
+/*Variables*/
+/*Mixins*/
+/*Reset margins and paddings*/
+/* line 11, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/*Stretch main so body fills viewport*/
+/* line 17, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  /* line 22, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+  body main {
+    flex: 1; }
+
+/*Prevent Google autocomplete's yellow overlay*/
+@-webkit-keyframes autofill {
+  to {
+    color: #000;
+    background: #fff; } }
+
+/* line 35, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both; }
+
+/*# sourceMappingURL=master.css.map */

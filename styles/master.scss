@@ -1,0 +1,43 @@
+/*Import global variables*/
+@import 'var';
+
+/*Variables*/
+
+
+/*Mixins*/
+
+
+/*Reset margins and paddings*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Stretch main so body fills viewport*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    main {
+        flex: 1;
+    }
+}
+
+/*Prevent Google autocomplete's yellow overlay*/
+@-webkit-keyframes autofill {
+    to {
+        color: #000;
+        background: #fff;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+}
