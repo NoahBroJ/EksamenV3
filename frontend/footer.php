@@ -1,5 +1,8 @@
             </section>
         </div>
+        
+        <hr>
+        
         <footer>
             <div id="footer-navs">
                 <nav>

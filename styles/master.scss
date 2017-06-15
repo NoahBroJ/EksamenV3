@@ -1,11 +1,5 @@
-/*Import global variables*/
+/*Import variables and mixins*/
 @import 'var';
-
-/*Variables*/
-
-
-/*Mixins*/
-
 
 /*Reset margins, paddings, and font-weights*/
 * {
@@ -25,6 +19,15 @@
 input:-webkit-autofill {
     -webkit-animation-name: autofill;
     -webkit-animation-fill-mode: both;
+}
+
+/*Global input styling*/
+input {
+    margin: 3px 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 /*STYLING BEGINS HERE*/
@@ -80,11 +83,27 @@ body {
                         display: block;
                         padding: 2px 0;
                         @include link;
-
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        
+                        &.active {
+                            color: $dark;
+                            
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
                     }
-
-                    a:hover {
-                        text-decoration: underline;
+                    
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        
+                        input {
+                            width: 65%;
+                        }
                     }
                 }
             }
@@ -274,13 +293,6 @@ body {
                         @include latoBold;
                         font-size: 1.1em;
                         margin-bottom: 20px;
-                    }
-                    
-                    input {
-                        margin: 5px 0;
-                        padding: 5px 15px;
-                        border-radius: 5px;
-                        border: 1px solid #ddd;
                     }
                 }
             }

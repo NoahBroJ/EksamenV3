@@ -1,6 +1,6 @@
 <?php
     /*Declare page variables*/
-    $page = "index";
+    $page = "shop";
     $title = "";
     $description = "";
     $pageTitle = "";
@@ -17,7 +17,7 @@
     </section>
     
     <section id="product-container">
-        <?php require "../backend/fetchLatest.php" ?>
+        <?php require "../backend/fetchProducts.php" ?>
     </section>
 </main>
 

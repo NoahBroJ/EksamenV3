@@ -15,12 +15,11 @@
     
     <!--Link style sheets-->
     <link rel="stylesheet" href="../styles/master.css">
-    <link rel="stylesheet" href="../styles/<?php echo $page ?>.css">
     
     <!--Link JQuery, Font Awesome, and script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/d333651ce6.js"></script>
-    <script src="../scripts/<?php echo $page ?>.js"></script>
+    <script src="../script/script.js"></script>
     
 </head>
 <body>
@@ -31,13 +30,14 @@
                 <img src="../img/logo2.jpg" alt="Logo" id="logo">
                 <h1>ØKO<span>shop.</span><br><span>DK</span></h1>
                 <nav>
-                    <a href="#">Forside</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Garanti</a>
-                    <a href="#">Om os</a>
-                    <a href="#">Kontakt</a>
-                    <a href="#">Log ind</a>
-                    <a href="#">Registrér</a>
+                    <a href="index.php"<?php if ($page == "index") {echo "class='active'";} ?>>Forside</a>
+                    <a href="shop.php"<?php if ($page == "shop") {echo "class='active'";} ?>>Shop</a>
+                    <a href="#"<?php if ($page == "upload") {echo "class='active'";} ?>>Upload</a>
+                    <a href="#"<?php if ($page == "about") {echo "class='active'";} ?>>Om os</a>
+                    <a href="#"<?php if ($page == "contact") {echo "class='active'";} ?>>Kontakt</a>
+                    <a href="#" id="log-ind">Log ind</a>
+                    <?php require "login.php" ?>
+                    <a href="#" id="register">Registrér</a>
                 </nav>
             </aside>
 
