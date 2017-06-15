@@ -19,7 +19,7 @@
     <section id="product-container">
         <article class="product">
             <img src="../img/1.jpg" alt="">
-            <h3>Produkt navn</h3>
+            <h4>Produkt navn</h4>
             <hr>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, ratione. Sapiente nostrum maiores quos hic alias, fugiat laborum ratione reiciendis voluptates quis assumenda modi dicta recusandae illo numquam nihil qui.</p>
             <p class="price">230 kr.</p>
