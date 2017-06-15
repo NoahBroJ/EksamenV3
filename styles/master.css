@@ -1,21 +1,15 @@
 /*Import global variables*/
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans");
+/*Colors*/
 /*Variables*/
 /*Mixins*/
-/*Reset margins and paddings*/
+/*Reset margins, paddings, and font-weights*/
 /* line 11, C:/xampp/htdocs/EksamenV3/styles/master.scss */
 * {
   margin: 0;
-  padding: 0; }
-
-/*Stretch main so body fills viewport*/
-/* line 17, C:/xampp/htdocs/EksamenV3/styles/master.scss */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; }
-  /* line 22, C:/xampp/htdocs/EksamenV3/styles/master.scss */
-  body main {
-    flex: 1; }
+  padding: 0;
+  font-weight: 400; }
 
 /*Prevent Google autocomplete's yellow overlay*/
 @-webkit-keyframes autofill {
@@ -23,9 +17,184 @@ body {
     color: #000;
     background: #fff; } }
 
-/* line 35, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+/* line 25, C:/xampp/htdocs/EksamenV3/styles/master.scss */
 input:-webkit-autofill {
   -webkit-animation-name: autofill;
   -webkit-animation-fill-mode: both; }
+
+/*STYLING BEGINS HERE*/
+/* line 31, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/bg.png);
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+  /* line 40, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+  body #wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    min-height: 100vh;
+    background: white; }
+    /* line 47, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+    body #wrapper aside {
+      flex: 1 1 12.5%;
+      padding: 5px 2%; }
+      /* line 51, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper aside #logo {
+        margin: 0 auto;
+        width: 100%; }
+      /* line 56, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper aside h1 {
+        font-size: 1.8em;
+        color: #b7d383;
+        margin-bottom: 15px; }
+        /* line 61, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper aside h1 span:first-child {
+          color: #89b23e; }
+        /* line 65, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper aside h1 span:last-child {
+          font-size: 2em;
+          color: #6B9814; }
+      /* line 71, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper aside nav {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400; }
+        /* line 76, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper aside nav a {
+          display: block;
+          padding: 2px 0;
+          color: black;
+          text-decoration: none;
+          transition: 0.2s; }
+          /* line 27, C:/xampp/htdocs/EksamenV3/styles/_var.scss */
+          body #wrapper aside nav a:hover {
+            color: #aaa; }
+        /* line 83, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper aside nav a:hover {
+          text-decoration: underline; }
+    /* line 89, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+    body #wrapper #right {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 87.5%;
+      background: #F0F3BD; }
+      /* line 97, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper #right header #header-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400; }
+        /* line 103, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper #right header #header-nav #social-icons {
+          display: flex;
+          flex-direction: row;
+          margin-left: 10px; }
+          /* line 108, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+          body #wrapper #right header #header-nav #social-icons a {
+            display: block;
+            margin: 10px;
+            color: black;
+            text-decoration: none;
+            transition: 0.2s; }
+            /* line 27, C:/xampp/htdocs/EksamenV3/styles/_var.scss */
+            body #wrapper #right header #header-nav #social-icons a:hover {
+              color: #aaa; }
+        /* line 115, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper #right header #header-nav #basket {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          /* line 120, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+          body #wrapper #right header #header-nav #basket a {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            color: black;
+            text-decoration: none;
+            transition: 0.2s; }
+            /* line 27, C:/xampp/htdocs/EksamenV3/styles/_var.scss */
+            body #wrapper #right header #header-nav #basket a:hover {
+              color: #aaa; }
+            /* line 126, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right header #header-nav #basket a i {
+              margin-right: 10px; }
+      /* line 133, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper #right header #banner {
+        width: 100%; }
+        /* line 136, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper #right header #banner img {
+          width: 100%; }
+      /* line 142, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+      body #wrapper #right main {
+        flex: 1; }
+        /* line 145, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper #right main #preamble {
+          padding: 50px 20px; }
+          /* line 148, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+          body #wrapper #right main #preamble h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            margin-bottom: 70px;
+            text-align: center; }
+        /* line 155, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+        body #wrapper #right main #product-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          /* line 161, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+          body #wrapper #right main #product-container .product {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            background: white;
+            padding-bottom: 30px; }
+            /* line 168, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product img {
+              max-width: 100%;
+              margin: 10px auto; }
+            /* line 173, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product h3 {
+              font-family: 'Lato', sans-serif;
+              font-weight: 900;
+              font-size: 1em;
+              margin: 10px; }
+            /* line 183, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product .description {
+              flex: 1;
+              margin: 10px; }
+            /* line 188, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product .price {
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 400;
+              background: #6B9814;
+              text-align: center;
+              font-size: 1.4em;
+              line-height: 1.6em;
+              color: white; }
+            /* line 197, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product .publish {
+              margin: 10px; }
+            /* line 201, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+            body #wrapper #right main #product-container .product button {
+              margin: auto;
+              width: 100px;
+              font-family: 'Lato', sans-serif;
+              font-weight: 900;
+              background: #6B9814;
+              color: white;
+              border: none;
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px #aaa; }
+              /* line 212, C:/xampp/htdocs/EksamenV3/styles/master.scss */
+              body #wrapper #right main #product-container .product button:focus {
+                outline: none; }
 
 /*# sourceMappingURL=master.css.map */

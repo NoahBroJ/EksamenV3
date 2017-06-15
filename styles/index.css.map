@@ -5,6 +5,6 @@
     "index.scss",
     "_var.scss"
   ],
-  "mappings": "AAAA,2BAA2B",
+  "mappings": "AAAA,2BAA2B;ACA3B,SAAS;AACT,OAAO,CAAC,qEAAI;AAcZ,UAAU",
   "names": []
 }

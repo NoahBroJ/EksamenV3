@@ -7,21 +7,11 @@
 /*Mixins*/
 
 
-/*Reset margins and paddings*/
+/*Reset margins, paddings, and font-weights*/
 * {
     margin: 0;
     padding: 0;
-}
-
-/*Stretch main so body fills viewport*/
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
-    main {
-        flex: 1;
-    }
+    font-weight: 400;
 }
 
 /*Prevent Google autocomplete's yellow overlay*/
@@ -35,6 +25,199 @@ body {
 input:-webkit-autofill {
     -webkit-animation-name: autofill;
     -webkit-animation-fill-mode: both;
+}
+
+/*STYLING BEGINS HERE*/
+body {
+    display: flex;
+    flex-direction: column;
+    
+    background-image: url(../img/bg.png);
+    
+    align-items: center;
+    @include lato();
+    
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        min-height: 100vh;
+        background: white;
+        
+        aside {
+            flex: 1 1 12.5%;
+            padding: 5px 2%;
+            
+            #logo {
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+                color: lighten($medium, 10%);
+                margin-bottom: 15px;
+                
+                span:first-child {
+                    color: darken($medium, 10%);
+                }
+                
+                span:last-child {
+                    font-size: 2em;
+                    color: $dark;
+                }
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+                @include sans;
+                
+                a {
+                    display: block;
+                    padding: 2px 0;
+                    @include link;
+                    
+                }
+                
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+        #right {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 87.5%;
+            background: $light;
+            
+            header {
+                
+                #header-nav {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    @include sans;
+                    
+                    #social-icons {
+                        display: flex;
+                        flex-direction: row;
+                        margin-left: 10px;
+                        
+                        a {
+                            display: block;
+                            margin: 10px;
+                            @include link;
+                        }
+                    }
+                    
+                    #basket {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        
+                        a {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 20px;
+                            @include link;
+                            
+                            i {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                
+                #banner {
+                    width: 100%;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            main {
+                flex: 1;
+                
+                #preamble {
+                    padding: 50px 20px;
+                    
+                    h2 {
+                        @include latoBold;
+                        margin-bottom: 70px;
+                        text-align: center;
+                    }
+                }
+                
+                #product-container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    
+                    .product {
+                        display: flex;
+                        flex-direction: column;
+                        width: 30%;
+                        background: white;
+                        padding-bottom: 30px;
+                        
+                        img {
+                            max-width: 100%;
+                            margin: 10px auto;
+                        }
+                        
+                        h3 {
+                            @include latoBold;
+                            font-size: 1em;
+                            margin: 10px;
+                        }
+                        
+                        hr {
+                            
+                        }
+                        
+                        .description {
+                            flex: 1;
+                            margin: 10px;
+                        }
+                        
+                        .price {
+                            @include sans;
+                            background: $dark;
+                            text-align: center;
+                            font-size: 1.4em;
+                            line-height: 1.6em;
+                            color: white;
+                        }
+                        
+                        .publish {
+                            margin: 10px;
+                        }
+                        
+                        button {
+                            margin: auto;
+                            width: 100px;
+                            @include latoBold;
+                            background: $dark;
+                            color: white;
+                            border: none;
+                            padding: 10px;
+                            border-radius: 5px;
+                            box-shadow: 0 0 10px #aaa;
+                            
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

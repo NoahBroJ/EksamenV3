@@ -24,6 +24,39 @@
     
 </head>
 <body>
-    <header>
+    <div id="wrapper">
         
-    </header>
+        <aside id="left">
+            <img src="../img/logo2.jpg" alt="Logo" id="logo">
+            <h1>ØKO<span>shop.</span><br><span>DK</span></h1>
+            <nav>
+                <a href="#">Forside</a>
+                <a href="#">Shop</a>
+                <a href="#">Garanti</a>
+                <a href="#">Om os</a>
+                <a href="#">Kontakt</a>
+                <a href="#">Log ind</a>
+                <a href="#">Registrér</a>
+            </nav>
+        </aside>
+        
+        <section id="right">
+            
+            <header>
+                <nav id="header-nav">
+                    <div id="social-icons">
+                        <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                    <div id="basket">
+                        <a href="#">Min konto</a>
+                        <a href="#"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> Min kurv</a>
+                    </div>
+                </nav>
+                
+                <figure id="banner">
+                    <img src="../img/banner.jpg" alt="Banner image">
+                </figure>
+            </header>
