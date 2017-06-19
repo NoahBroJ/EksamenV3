@@ -1,13 +1,14 @@
-<form action="addProduct.php">
+<form id="upload-form" action="../backend/addProduct.php" method="POST">
     <div class="divider">
         <div>
             <input name="name" type="text" placeholder="Produktnavn">
-            <input name="pris" type="number" placeholder="Pris">
+            <input name="price" type="number" placeholder="Pris">
             <input name="category" type="text" placeholder="Kategori">
+            <input name="img" type="text" placeholder="Billedsti">
         </div>
-            <textarea name="description" cols="30" rows="10" placeholder="Beskrivelse"></textarea>
         <div>
+            <textarea name="description" cols="30" rows="7" placeholder="Beskrivelse"></textarea>
         </div>
     </div>
-    <textarea name="img" cols="30" rows="10" placeholder="Billedsti"></textarea>
+    <input class="input" type="submit">
 </form>

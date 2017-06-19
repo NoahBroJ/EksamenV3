@@ -16,9 +16,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nesciunt obcaecati voluptatibus, maxime in. Deleniti esse alias ratione ipsam, dolorum ea, eligendi possimus aperiam repellendus consequuntur, tempora qui, inventore reprehenderit!</p>
     </section>
     <?php if (isset($_SESSION['userId'])) { ?>
-    <section>
+    <section id="upload">
         <h3 id="product-upload">Tilføj Produkt</h3>
-        
+        <hr>
+        <?php require "upload.php" ?>
+        <hr>
     </section>
     <?php } ?>
     <section id="product-container">

@@ -206,6 +206,63 @@ body {
                             text-align: center;
                         }
                     }
+                    
+                    #upload {
+                        
+                        h3 {
+                            font-weight: 900;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                        
+                        hr {
+                            margin: 10px 0;
+                            transition: 0.2s;
+                        }
+                        
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            
+                            .divider {
+                                display: flex;
+                                flex-direction: row;
+                                
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 50%;
+                                    padding: 10px;
+                                }
+                            }
+                            
+                            textarea {
+                                resize: vertical;
+                                margin: 3px 0;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                border: 1px solid #ddd;
+                                box-sizing: content-box;
+
+                                &::placeholder {
+                                    opacity: 0.5;
+                                    @include lato();
+                                }
+                            }
+                            
+                            .input {
+                                background: #eee;
+                                cursor: pointer;
+                                transition: 0.2s;
+                                
+                                &:hover {
+                                    background: #ddd;
+                                }
+                            }
+                        }
+                    }
 
                     #product-container {
                         display: flex;
@@ -220,6 +277,7 @@ body {
                             width: 30%;
                             background: white;
                             padding-bottom: 30px;
+                            margin-bottom: 15px;
                             box-shadow: 0 0 10px #aaa;
 
                             img {
@@ -250,10 +308,22 @@ body {
                                 line-height: 1.6em;
                                 color: white;
                             }
-
-                            .publish {
-                                margin: 10px;
+                            
+                            .publish-details {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                
+                                .authorname {
+                                    margin: 10px;
+                                    font-weight: 700;
+                                }
+                                
+                                .publish {
+                                    margin: 10px;
+                                }
                             }
+
 
                             button {
                                 margin: auto;
@@ -265,6 +335,12 @@ body {
                                 padding: 10px;
                                 border-radius: 5px;
                                 box-shadow: 0 0 10px #aaa;
+                                cursor: pointer;
+                                transition: 0.2s;
+                                
+                                &:hover {
+                                    opacity: 0.5;
+                                }
 
                                 &:focus {
                                     outline: none;
@@ -310,7 +386,7 @@ body {
                             color: $dark;
                             
                             &:hover {
-                                color: lighten($dark, 30%);
+                                opacity: 0.5;
                             }
                         }
                     }
