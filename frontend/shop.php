@@ -15,7 +15,12 @@
         
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nesciunt obcaecati voluptatibus, maxime in. Deleniti esse alias ratione ipsam, dolorum ea, eligendi possimus aperiam repellendus consequuntur, tempora qui, inventore reprehenderit!</p>
     </section>
-    
+    <?php if (isset($_SESSION['userId'])) { ?>
+    <section>
+        <h3 id="product-upload">Tilføj Produkt</h3>
+        
+    </section>
+    <?php } ?>
     <section id="product-container">
         <?php require "../backend/fetchProducts.php" ?>
     </section>

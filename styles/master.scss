@@ -24,10 +24,20 @@ input:-webkit-autofill {
 /*Global input styling*/
 input {
     margin: 3px 0;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    
+    &::placeholder {
+        opacity: 0.5;
+    }
+}
+
+/*Global error message styling*/
+.error {
+    font-size: 0.7em;
+    color: #e00;
 }
 
 /*STYLING BEGINS HERE*/
@@ -74,7 +84,6 @@ body {
                 }
 
                 nav {
-                    position: fixed;
                     display: flex;
                     flex-direction: column;
                     @include sans;
@@ -97,12 +106,34 @@ body {
                         }
                     }
                     
+                    #log-ind, #register {
+                        display: block;
+                        padding: 2px 0;
+                        cursor: pointer;
+                        @include link;
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    
                     form {
                         display: flex;
                         flex-direction: column;
                         
+                        
                         input {
-                            width: 65%;
+                            width: 100%;
+                        }
+                        
+                        .submit {
+                            background: #eee;
+                            cursor: pointer;
+                            transition: 0.2s;
+                            
+                            &:hover {
+                                background: #ddd;
+                            }
                         }
                     }
                 }
@@ -140,10 +171,11 @@ body {
                             flex-direction: row;
                             align-items: center;
 
-                            a {
+                            a, p {
                                 display: flex;
                                 align-items: center;
                                 margin-right: 20px;
+                                cursor: pointer;
                                 @include link;
 
                                 i {
