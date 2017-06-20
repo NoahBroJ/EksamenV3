@@ -11,7 +11,8 @@ if ($password != $repassword) {
     require "connect.php";
     
     /*Find duplicate names in database*/
-    $stmt = $dbh->prepare("SELECT * FROM users WHERE username = $username");
+    $stmt = $dbh->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bindParam(1, $username);
     $stmt->execute();
     
     /*If duplicate, return with error*/
@@ -27,4 +28,7 @@ if ($password != $repassword) {
         header("Location: ../frontend/index.php", true, 303);
     }
 }
+
+/*Close connection*/
+$dbh = null;
 ?>

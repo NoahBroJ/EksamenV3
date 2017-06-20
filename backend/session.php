@@ -21,4 +21,7 @@ if($row = $statement->fetch()) {
     /*Brugeren har indtastet forkerte oplysninger*/
     header("location: ../frontend/index.php?e=l");
 }
+
+/*Close connection*/
+$dbh = null;
 ?>

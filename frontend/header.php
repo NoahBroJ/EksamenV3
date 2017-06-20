@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" href="../img/logo2.jpg">
     
     <!--Link style sheets-->
-    <link rel="stylesheet" href="../styles/master.css">
+    <link rel="stylesheet" href="../styles/style.css">
     
     <!--Link JQuery, Font Awesome, and script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,6 +26,9 @@
     
 </head>
 <body>
+    <div id="aside-bar">
+        <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+    </div>
     <div id="wrapper">
         <div id="content">
 

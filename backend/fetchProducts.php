@@ -15,6 +15,17 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     /*Insert into HTML*/
 ?>
     <article class="product">
+        
+        <?php
+        /*If user has access level 1 or has access level 2 and is the author, display delete button*/
+        if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+            
+            if ($_SESSION['access'] == 1 || ( $_SESSION['access'] == 2 && $_SESSION['userId'] == $row['authorId'] )) { ?>
+                
+                <a class="delete-button" href="../backend/delete.php?id=<?php echo $row['id'] ?>"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+                
+        <?php } } ?>
+        
         <img src="../img/<?php echo $row["img"] ?>" alt="Produkt <?php echo $row["id"] ?> - <?php echo $row["name"] ?>">
         <h4><?php echo $row["name"] ?></h4>
         <hr>

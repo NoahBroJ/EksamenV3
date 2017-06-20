@@ -50,8 +50,21 @@ body {
     align-items: center;
     @include lato();
     
+    #aside-bar {
+        background: white;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 30px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    
     #wrapper {
         width: 70%;
+        max-width: 1100px;
         min-height: 100vh;
         background: white;
 
@@ -61,7 +74,7 @@ body {
 
             aside {
                 flex: 1 1 12.5%;
-                padding: 5px 2%;
+                padding: 5px 10px;
 
                 #logo {
                     margin: 0 auto;
@@ -90,7 +103,7 @@ body {
 
                     a {
                         display: block;
-                        padding: 2px 0;
+                        padding: 2px 5px;
                         @include link;
                         
                         &:hover {
@@ -108,7 +121,7 @@ body {
                     
                     #log-ind, #register {
                         display: block;
-                        padding: 2px 0;
+                        padding: 2px 5px;
                         cursor: pointer;
                         @include link;
                         
@@ -189,6 +202,7 @@ body {
                         width: 100%;
 
                         img {
+                            min-width: 100%;
                             width: 100%;
                         }
                     }
@@ -273,12 +287,23 @@ body {
 
                         .product {
                             display: flex;
+                            position: relative;
                             flex-direction: column;
                             width: 30%;
                             background: white;
                             padding-bottom: 30px;
                             margin-bottom: 15px;
                             box-shadow: 0 0 10px #aaa;
+                            
+                            .delete-button {
+                                position: absolute;
+                                display: block;
+                                width: 32px;
+                                text-align: center;
+                                top: 5px;
+                                right: 5px;
+                                color: #e00;
+                            }
 
                             img {
                                 max-width: 100%;
@@ -414,6 +439,110 @@ body {
 }
 
 
-@media only screen and (max-width: 500px) {
-    
+@media only screen and (max-width: 1300px) {
+    body {
+        #wrapper {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        #wrapper {
+            #content {
+                #right {
+                    main {
+                        #product-container {
+                            .product {
+                                width: 45%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    body {
+        #aside-bar {
+            display: flex;
+        }
+        #wrapper {
+            width: auto;
+            margin-left: 30px;
+            
+            #content {
+                aside {
+                    position: fixed;
+                    background: white;
+                    width: 130px;
+                    height: 100vh;
+                    left: -150px;
+                    border-right: 2px solid rgba(0,0,0,0.1);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    body {
+        #wrapper {
+            #content {
+                #right {
+                    main {
+                        #product-container {
+                            .product {
+                                width: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            footer {
+                #footer-navs {
+                    flex-direction: column;
+                    
+                    nav {
+                        margin-bottom: 15px;
+                        text-align: center;
+                        
+                        #social-icons-2 {
+                            margin: 0 auto;
+                        }
+                    }
+                    
+                    form {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    body {
+        #wrapper {
+            #content {
+                #right {
+                    header {
+                        #header-nav {
+                            justify-content: center;
+                            padding: 5px 0;
+                            
+                            #social-icons {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
