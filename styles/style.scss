@@ -28,6 +28,7 @@ input {
     border-radius: 5px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    background: white;
     
     &::placeholder {
         opacity: 0.5;
@@ -259,10 +260,10 @@ body {
                                 border-radius: 5px;
                                 border: 1px solid #ddd;
                                 box-sizing: content-box;
+                                @include lato();
 
                                 &::placeholder {
                                     opacity: 0.5;
-                                    @include lato();
                                 }
                             }
                             
@@ -273,6 +274,46 @@ body {
                                 
                                 &:hover {
                                     background: #ddd;
+                                }
+                            }
+                        }
+                    }
+                    
+                    #search-form {
+                        #search-container {
+                            display: flex;
+                            flex-direction: row;
+                            margin: 5px auto;
+                            border-radius: 5px;
+                            border: 1px solid #ddd;
+                            box-sizing: border-box;
+                            background: white;
+                            width: 30%;
+                            min-width: 230px;
+                            
+                            #search {
+                                border: none;
+                                border-radius: 0;
+                                background: none;
+                                flex: 1 1;
+                                
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            
+                            #search-submit {
+                                margin: 0;
+                                height: 35px;
+                                width: 35px;
+                                border: none;
+                                background: $medium;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: 0.2s;
+                                
+                                &:hover {
+                                    background: darken($medium, 10%);
                                 }
                             }
                         }
@@ -323,6 +364,14 @@ body {
                             .description {
                                 flex: 1;
                                 margin: 10px;
+                            }
+                            
+                            .category {
+                                margin: 10px 10px 10px auto;
+                                padding: 5px;
+                                background: $light;
+                                border: 1px solid darken($light, 20%);
+                                border-radius: 3px;
                             }
 
                             .price {
@@ -483,6 +532,22 @@ body {
                     left: -150px;
                     border-right: 2px solid rgba(0,0,0,0.1);
                     transition: 0.2s;
+                }
+                
+                #right {
+                    main {
+                        #upload {
+                            #upload-form {
+                                .divider {
+                                    flex-direction: column;
+                                    
+                                    div {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

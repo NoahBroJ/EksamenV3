@@ -7,6 +7,11 @@
     
     /*Include head and header*/
     require "header.php";
+    
+    /*Get search tags*/
+    if (!empty($_GET["search"])) {
+        $searchTag = trim($_GET["search"]);
+    }
 ?>
 
 <main>
@@ -23,6 +28,14 @@
         <hr>
     </section>
     <?php } ?>
+    
+    <form id="search-form" action="shop.php">
+        <div id="search-container">
+            <input id="search" type="text" name="search">
+            <button id="search-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </form>
+    
     <section id="product-container">
         <?php require "../backend/fetchProducts.php" ?>
     </section>

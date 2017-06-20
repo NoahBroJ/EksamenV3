@@ -4,7 +4,6 @@
             <input name="name" type="text" placeholder="Produktnavn">
             <input name="price" type="number" placeholder="Pris">
             <input name="category" type="text" placeholder="Kategori">
-            <!--<input name="img" type="text" placeholder="Billedsti">-->
             <input type="file" name="img" id="img">
         </div>
         <div>

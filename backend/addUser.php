@@ -24,6 +24,8 @@ if ($password != $repassword) {
         $statement->bindParam(1, $username);
         $statement->bindParam(2, $password);
         $statement->execute();
+        
+        require "session.php";
 
         header("Location: ../frontend/index.php", true, 303);
     }
