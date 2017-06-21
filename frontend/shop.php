@@ -1,9 +1,9 @@
 <?php
     /*Declare page variables*/
     $page = "shop";
-    $title = "";
-    $description = "";
-    $pageTitle = "";
+    $title = "Shop her for økologiske plejeprodukter eller sælg dine egne!";
+    $description = "Økoshop.DK's shop er for alle og enhver. Økologi kender ingen grænser, og vi tilbyder produkter fra alle egne af landet, produceret lokalt hos vores egne brugere.";
+    $pageTitle = "Økoshop.DK - Shop";
     
     /*Include head and header*/
     require "header.php";

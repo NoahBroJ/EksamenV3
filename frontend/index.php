@@ -1,9 +1,9 @@
 <?php
     /*Declare page variables*/
     $page = "index";
-    $title = "";
-    $description = "";
-    $pageTitle = "";
+    $title = "Økologiske produkter til pleje af kroppen";
+    $description = "Økoshop.DK tilbyder et bredt udvalg af produkter til usammenlignelige priser, alle produceret lokalt. Opret en bruger nu og deltag i fællesskabet.";
+    $pageTitle = "Økoshop.dk - Home";
     
     /*Include head and header*/
     require "header.php";

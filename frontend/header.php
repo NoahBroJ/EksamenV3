@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta title="<?php echo $title ?>">
     <meta name="description" content="<?php echo $description ?>">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="Økologi, Hårpleje, Skønhed, Shop">
     <meta name="author" content="Noah Bro-Jørgensen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle ?></title>
